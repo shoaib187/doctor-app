@@ -143,7 +143,6 @@ const CountBlogViews = async (req, res) => {
 const GetDocArticles = async (req, res) => {
   try {
     const articles = await Articles.find();
-    // console.log("articles", articles);
     return res.status(200).json(articles);
   } catch (error) {
     return res.status(500).json({ status: "Error", message: error });
